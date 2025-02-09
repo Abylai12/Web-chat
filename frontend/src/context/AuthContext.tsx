@@ -11,7 +11,7 @@ import {
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { apiURL } from "@/utils/api-url";
-import { axiosInstance } from "@/lib/axios";
+import { axiosInstance } from "@/lib/axios-instance";
 import { io, Socket } from "socket.io-client";
 
 export interface User {
@@ -20,14 +20,6 @@ export interface User {
   userName: string;
   image?: string;
   created_at: string;
-}
-
-interface Message {
-  _id: string;
-  senderId: string;
-  text?: string;
-  image?: string;
-  createdAt: string;
 }
 
 interface Login {

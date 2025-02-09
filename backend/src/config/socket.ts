@@ -11,6 +11,7 @@ const io: Server = new Server(server, {
   cors: {
     origin: [process.env.CLIENT_URL || "http://localhost:3000"],
     credentials: true,
+    methods: ["GET", "POST"],
   },
 });
 interface UserSocketMap {

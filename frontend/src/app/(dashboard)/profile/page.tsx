@@ -3,7 +3,7 @@
 import { useState, ChangeEvent } from "react";
 import { Camera, Mail, User } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
-import { axiosInstance } from "@/lib/axios";
+import { axiosInstance } from "@/lib/axios-instance";
 import toast from "react-hot-toast";
 
 const ProfilePage = () => {
