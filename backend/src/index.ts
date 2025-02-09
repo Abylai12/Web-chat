@@ -2,7 +2,6 @@ import express, { Request, Response } from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-
 import authRoutes from "./routes/auth-route";
 import messageRoutes from "./routes/message-route";
 import { connectDB } from "./config/db";
