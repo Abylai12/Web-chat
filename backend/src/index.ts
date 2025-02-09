@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -21,6 +21,11 @@ const corsOptions = {
   credentials: true,
 };
 app.use(cors(corsOptions));
+
+app.get("/", async (_: Request, res: Response) => {
+  res.send("Welcome to Web Chat API Server");
+  //localhost:8000/
+});
 
 connectDB(MONGO_URI);
 
